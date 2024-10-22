@@ -2,7 +2,6 @@
 
 ## Ejercicios Clase 1
 
-
 ### Bloque A - Ejercicio 1
 Cálculo de la raíz cuadrada
 * Elaborar el código para el cálculo de la raíz cuadrada de un número.
