@@ -8,3 +8,4 @@ Este repositorio contiene los ejercicios asociados a las clases del programa Des
 * Modulo 2: Programación Avanzada Python
   * [Clase 1](/modulo-2-clase-1/README.md)
   * [Clase 2](/modulo-2-clase-2/README.md)
+  * [Clase 3](/modulo-2-clase-3/README.md)
