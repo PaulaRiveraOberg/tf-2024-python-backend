@@ -50,7 +50,5 @@ Modelo de clases
 * Construya un modelo de clases para el caso del ejercicio anterior (Bloque A).
 * Presente y discuta el modelo.
 
-### Bloque B - Ejercicio 2
-Viento registrado en estaciones de monitoreo
-* Modifique el programa anterior para mostrar por pantalla los vientos que sobrepasan los 20 kilómetros por hora.
-* Utilice una operación filter() para complementar el ejercicio anterior de tal manera que pueda dar cumplimiento a los requisitos de este ejercicio.
+
+![modelo](img/modelo.png)]
