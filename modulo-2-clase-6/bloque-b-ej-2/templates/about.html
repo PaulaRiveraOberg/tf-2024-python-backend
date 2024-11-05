@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Acerca de Nosotros</title>
+</head>
+<body>
+    <ul>
+        <li><a href="/">home</a></li>
+        <li><a href="/about">about</a></li>
+        <li><a href="/perfil">perfil</a></li>
+        <li><a href="/anuncio">anuncio</a></li>
+        <li><a href="/anuncios">anuncios</a></li>
+    </ul>
+    <h1>{{ group.name }}</h1>
+    <p>{{ group.description }}</p>
+    <h2>Integrantes:</h2>
+    <ul>
+        {% for integrante in group.members %}
+        <li>{{ integrante }}</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>

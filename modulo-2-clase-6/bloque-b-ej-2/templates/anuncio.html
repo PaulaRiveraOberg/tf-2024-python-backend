@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Publicar Anuncio</title>
+</head>
+<body>
+    <ul>
+        <li><a href="/">home</a></li>
+        <li><a href="/about">about</a></li>
+        <li><a href="/perfil">perfil</a></li>
+        <li><a href="/anuncio">anuncio</a></li>
+        <li><a href="/anuncios">anuncios</a></li>
+    </ul>
+    <h1>Publicar un Nuevo Anuncio</h1>
+
+    {% if error %}
+        <p style="color: red;">{{ error }}</p>
+    {% endif %}
+
+    <form action="/anuncio" method="POST">
+        <label for="titulo">Título (obligatorio):</label>
+        <input type="text" id="titulo" name="titulo" required>
+
+        <label for="contenido">Contenido (obligatorio):</label>
+        <textarea id="contenido" name="contenido" required></textarea>
+
+        <label for="prioridad">Prioridad:</label>
+        <select id="prioridad" name="prioridad">
+            <option value="alta">Alta</option>
+            <option value="media" selected>Media</option>
+            <option value="baja">Baja</option>
+        </select>
+
+        <button type="submit">Publicar</button>
+    </form>
+</body>
+</html>

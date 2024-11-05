@@ -11,3 +11,4 @@ Este repositorio contiene los ejercicios asociados a las clases del programa Des
   * [Clase 3](/modulo-2-clase-3/README.md)
   * [Clase 4](/modulo-2-clase-4/README.md)
   * [Clase 5](/modulo-2-clase-5/README.md)
+  * [Clase 6](/modulo-2-clase-6/README.md)
