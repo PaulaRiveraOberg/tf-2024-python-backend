@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Home</title>
+</head>
+<body>
+    <h1>Hello, World!</h1>
+    <p>Mi framework MVC!</p>
+
+    <h2>Avisos:</h2>
+    <ul>
+    {% for aviso in avisos %}
+        <li>{{ aviso.fecha }} - {{ aviso.titulo }} by {{ aviso.autor }}</li>
+    {% endfor %}
+    </ul>
+</body>
+</html>
