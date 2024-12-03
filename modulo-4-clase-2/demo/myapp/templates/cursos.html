@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Cursos</title>
+</head>
+<body>
+    <h1>Cursos</h1>
+    <ul>
+        {% if cursos %}
+            {% for curso in cursos %}
+                <li>{{ curso }}</li>
+            {% endfor %}
+        {% else %}
+            <li>No hay cursos</li>
+        {% endif %}
+    </ul>
+</body>
+</html>
