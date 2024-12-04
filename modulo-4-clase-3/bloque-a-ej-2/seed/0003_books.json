@@ -1,0 +1,32 @@
+[
+    {
+        "pk": 1,
+        "model": "biblioteca.libro",
+        "fields": {
+            "titulo": "El Resplandor",
+            "fecha_publicacion": "1977-01-01",
+            "autores": [1, 2],
+            "genero": 1
+        }
+    },
+    {
+        "pk": 2,
+        "model": "biblioteca.libro",
+        "fields": {
+            "titulo": "Harry Potter y la Piedra Filosofal",
+            "fecha_publicacion": "1997-06-26",
+            "autores": [2],
+            "genero": 2
+        }
+    },
+    {
+        "pk": 3,
+        "model": "biblioteca.libro",
+        "fields": {
+            "titulo": "El Misterio de la Isla de los Perros",
+            "fecha_publicacion": "1987-01-01",
+            "autores": [1],
+            "genero": 3
+        }
+    }
+]

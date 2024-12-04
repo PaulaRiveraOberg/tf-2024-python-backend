@@ -18,3 +18,4 @@ Este repositorio contiene los ejercicios asociados a las clases del programa Des
 * Modulo 4: Introducción al desarrollo con frameworks
   * [Clase 1](/modulo-4-clase-1/README.md)
   * [Clase 2](/modulo-4-clase-2/README.md)
+  * [Clase 3](/modulo-4-clase-3/README.md)

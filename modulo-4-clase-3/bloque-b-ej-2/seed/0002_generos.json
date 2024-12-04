@@ -1,0 +1,23 @@
+[
+    {
+        "pk": 1,
+        "model": "biblioteca.genero",
+        "fields": {
+            "nombre": "Ficción"
+        }
+    },
+    {
+        "pk": 2,
+        "model": "biblioteca.genero",
+        "fields": {
+            "nombre": "No Ficción"
+        }
+    },
+    {
+        "pk": 3,
+        "model": "biblioteca.genero",
+        "fields": {
+            "nombre": "Ciencia Ficción"
+        }
+    }
+]
