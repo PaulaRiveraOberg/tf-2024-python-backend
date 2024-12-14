@@ -1,0 +1,68 @@
+[
+    {
+        "model": "auth.user",
+        "pk": 1,
+        "fields": {
+            "password": "pbkdf2_sha256$870000$0MSJ7rIV87q9IQqPnDZxOR$2NvqcEp6daq4ORsUO/Bl7FTZOWgYzSax3rvVJKMgVW0=",
+            "last_login": "2024-12-14T11:53:42.355Z",
+            "is_superuser": true,
+            "username": "roberto",
+            "first_name": "",
+            "last_name": "",
+            "email": "",
+            "is_staff": true,
+            "is_active": true,
+            "date_joined": "2024-12-12T20:55:20.237Z",
+            "groups": [],
+            "user_permissions": []
+        }
+    },
+    {
+        "model": "auth.user",
+        "pk": 2,
+        "fields": {
+            "password": "pbkdf2_sha256$870000$0MSJ7rIV87q9IQqPnDZxOR$2NvqcEp6daq4ORsUO/Bl7FTZOWgYzSax3rvVJKMgVW0=",
+            "last_login": "2024-12-14T11:53:42.355Z",
+            "is_superuser": false,
+            "username": "roberto_user",
+            "first_name": "",
+            "last_name": "",
+            "email": "",
+            "is_staff": false,
+            "is_active": true,
+            "date_joined": "2024-12-12T20:55:20.237Z",
+            "groups": [],
+            "user_permissions": []
+        }
+    },
+    {
+        "model": "rooms.room",
+        "pk": 1,
+        "fields": {
+            "name": "Suite Ejecutiva",
+            "description": "Una suite amplia con vista al mar",
+            "price_per_night": "150.00",
+            "is_available": true
+        }
+    },
+    {
+        "model": "rooms.room",
+        "pk": 2,
+        "fields": {
+            "name": "Habitación Doble",
+            "description": "Habitación con dos camas individuales",
+            "price_per_night": "100.00",
+            "is_available": false
+        }
+    },
+    {
+        "model": "rooms.reservation",
+        "pk": 2,
+        "fields": {
+            "user": 1,
+            "room": 1,
+            "start_date": "2024-12-10",
+            "end_date": "2024-12-15"
+        }
+    }
+]
