@@ -1,0 +1,51 @@
+[
+    {
+        "model": "auth.user",
+        "pk": 1,
+        "fields": {
+            "username": "admin",
+            "password": "admin",
+            "email": "admin@admin.com",
+            "is_superuser": true,
+            "is_staff": true,
+            "is_active": true
+        }
+    },
+    {
+        "model": "myapp.post",
+        "pk": 1,
+        "fields": {
+            "title": "Desarrollo de Software",
+            "content": "El desarrollo de software es el proceso de crear programas informáticos para resolver problemas y satisfacer necesidades específicas. Este campo abarca una amplia gama de actividades, desde la concepción inicial de una idea hasta la implementación y mantenimiento de sistemas complejos. Los desarrolladores de software trabajan en equipos multidisciplinarios, colaborando con especialistas en diseño, ingeniería, testing y gestión de proyectos para producir soluciones eficientes y de alta calidad.",
+            "author": 1,
+            "published": true,
+            "created_at": "2024-01-01 00:00:00",
+            "updated_at": "2024-01-01 00:00:00"
+        }
+    },
+    {
+        
+        "model": "myapp.post",
+        "pk": 2,
+        "fields": {
+            "title": "Desarrollo Backend",
+            "content": "El desarrollo backend se centra en la lógica y la funcionalidad detrás de las aplicaciones web. Los desarrolladores backend crean y mantienen el servidor, la base de datos y la infraestructura necesaria para que las aplicaciones web funcionen de manera eficiente. También gestionan la seguridad y la optimización del rendimiento de las aplicaciones. Este campo es crucial para garantizar que las aplicaciones sean robustas, escalables y seguras.",
+            "author": 1,
+            "published": true,
+            "created_at": "2024-01-01 00:00:00",
+            "updated_at": "2024-01-01 00:00:00"
+        }
+    },
+    {
+        "model": "myapp.post",
+        "pk": 3,
+        "fields": {
+            "title": "Desarrollo Frontend",
+            "content": "El desarrollo frontend se enfoca en la parte visual y la interacción con el usuario de las aplicaciones web. Los desarrolladores frontend crean interfaces de usuario atractivas y funcionales utilizando HTML, CSS y JavaScript. También trabajan en la optimización del rendimiento y la experiencia del usuario. Este campo es esencial para garantizar que las aplicaciones sean intuitivas y amigables para los usuarios.",
+            "author": 1,
+            "published": true,
+            "created_at": "2024-01-01 00:00:00",
+            "updated_at": "2024-01-01 00:00:00"
+        }
+    }
+]

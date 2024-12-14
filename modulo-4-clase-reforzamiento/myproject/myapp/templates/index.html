@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <div class="grid gap-8">
+            {% for post in posts %}
+            <article class="bg-white p-6 rounded-lg shadow-md">
+                <h2 class="text-2xl font-bold text-gray-800 mb-2">
+                    <a href="{% url 'post_detail' post.id %}">
+                        {{ post.title }}
+                    </a>
+                </h2>
+                <div class="flex items-center text-gray-500 text-sm mb-4">
+                    <span>Por {{ post.author.username }}</span>
+                    <span class="mx-2">•</span>
+                    <span>{{ post.created_at|date:"d M, Y" }}</span>
+                </div>
+                <div class="prose text-gray-600 mb-4">
+                    {{ post.content|truncatewords:50 }}
+                </div>
+                <div class="flex justify-between items-center">
+                    <a href="#" class="text-blue-600 hover:text-blue-800">
+                        Leer más →
+                    </a>
+                    {% if post.updated_at %}
+                    <span class="text-sm text-gray-500">
+                        Actualizado: {{ post.updated_at|date:"d M, Y" }}
+                    </span>
+                    {% endif %}
+                </div>
+            </article>
+            {% empty %}
+            <div class="text-center text-gray-600 py-8">
+                No hay posts disponibles.
+            </div>
+            {% endfor %}
+        </div>
+{% endblock %}
