@@ -23,3 +23,4 @@ Este repositorio contiene los ejercicios asociados a las clases del programa Des
   * [Clase 5](/modulo-4-clase-5/README.md)
   * [Clase 6](/modulo-4-clase-6/README.md)
   * [Clase Reforzamiento](/modulo-4-clase-reforzamiento/README.md)
+  * [Clase 6](/modulo-4-clase-7/README.md)

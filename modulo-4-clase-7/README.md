@@ -1,4 +1,4 @@
-# Modulo 4 - Clase 6 Construyendo una API en DRF
+# Modulo 4 - Clase 7 REST y servicios FastAPI 
 
 ## Ejercicio 1
 
