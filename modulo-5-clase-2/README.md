@@ -164,6 +164,21 @@ Existen 4 tipos de JOIN:
 - RIGHT JOIN
 - FULL JOIN
 
+Usando estas tablas de ejemplo:
+
+```sql
+CREATE TABLE empleado (
+    id_empleado serial primary key,
+    nombre_empleado varchar(50) NOT NULL
+);
+
+CREATE TABLE credencial (
+    id_credencial serial primary key,
+    id_empleado int,
+    FOREIGN KEY (id_empleado) REFERENCES empleado(id_empleado)
+);
+```
+
 #### INNER JOIN
 
 INNER JOIN nos permite combinar registros de dos o más tablas basándonos en una condición. Nos devuelve los registros que tienen una relación entre las tablas.
@@ -174,11 +189,6 @@ ejemplo:
 SELECT * 
 FROM empleado 
 INNER JOIN credencial ON empleado.id_empleado = credencial.id_empleado;
-```
-
-```mermaid
-erDiagram
-    empleado ||--o{ credencial : "tiene"
 ```
 
 #### LEFT JOIN
@@ -193,11 +203,6 @@ FROM empleado
 LEFT JOIN credencial ON empleado.id_empleado = credencial.id_empleado;
 ```
 
-```mermaid
-erDiagram
-    empleado ||--o{ credencial : "tiene"
-```
-
 #### RIGHT JOIN
 
 RIGHT JOIN nos permite combinar registros de dos o más tablas basándonos en una condición. Nos devuelve TODOS los registros de la tabla derecha y los registros de la tabla izquierda que tengan una relación.
@@ -208,11 +213,6 @@ ejemplo:
 SELECT * 
 FROM empleado 
 RIGHT JOIN credencial ON empleado.id_empleado = credencial.id_empleado;
-```
-
-```mermaid
-erDiagram
-    empleado ||--o{ credencial : "tiene"
 ```
 
 #### FULL OUTER JOIN
@@ -300,4 +300,31 @@ FULL OUTER JOIN credencial ON empleado.id_empleado = credencial.id_empleado;
 | 2           | Maria Gomez     | 2             | 1234567891        |
 | 3           | Pedro Rodriguez |               |                   |
 |             |                 | 3             | 1234567892        |
+
+
+## Ejercicio A: Relaciones
+
+Siga el siguiente diagrama y desarróllelo en SQL.
+
+![Diagrama ER](img/diagrama-er.png)
+
+## Solución
+
+* [solución](ejercicio-bloque-a.sql)
+
+## Ejercicio B: JOINS y Consultas
+
+Basados en el resultado del ejercicio anterior.
+
+1. Agregue al menos 3 registros para cada tabla, considerando las relaciones. 
+2. Obtenga lo siguiente: 
+    1. Direcciones por personas.
+    2. Teléfonos por personas. 
+    3. Profesores por paralelos. 
+    4. Información por profesor (nombre, apellido, teléfonos, y direcciones). 
+    5. Información de paralelos de profesores, consideración todos los datos de cada persona. 
+
+## Solución
+
+* [solución](ejercicio-bloque-b.sql)
 

@@ -24,3 +24,6 @@ Este repositorio contiene los ejercicios asociados a las clases del programa Des
   * [Clase 6](/modulo-4-clase-6/README.md)
   * [Clase Reforzamiento](/modulo-4-clase-reforzamiento/README.md)
   * [Clase 6](/modulo-4-clase-7/README.md)
+* Modulo 5: Acceso a Datos en Entornos Python
+  * [Clase 1](/modulo-5-clase-1/)
+  * [Clase 2](/modulo-5-clase-2/README.md)
