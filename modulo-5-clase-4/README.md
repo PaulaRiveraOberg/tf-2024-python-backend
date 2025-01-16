@@ -7,7 +7,7 @@ El ORM de Django es una herramienta que permite interactuar con la base de datos
 ```bash
 django-admin startproject myproject
 cd myproject
-django-admin startapp myapp
+django-admin startapp app
 ```
 
 Crearemos los modelos de la BD con la que hemos trabajado en las clases anteriores en [myproject/myapp/models.py](myproject/myapp/models.py).
@@ -18,7 +18,7 @@ Vamos a cambiar el motor de base de datos de nuestro proyecto a PostgreSQL. Para
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'talentofuturo',
+        'NAME': 'm5clase4',
         'USER': 'roberto',
         'PASSWORD': 'roberto',
         'HOST': 'localhost',
@@ -52,10 +52,24 @@ USE_TZ = False
 
 ### Carga de datos
 
-Para cargar los datos de la BD, podemos usar el siguiente comando:
+Para cargar una muestra pequeña de los datos de la BD, podemos usar el siguiente comando:
 
 ```bash
+# correr migrations
+python manage.py migrate
+# cargar datos
 python manage.py loaddata data.json
+```
+
+Si queremos cargar todos los datos proveidos en los archivos .sql, podemos usar el siguiente comando para cargar los archivos .sql mediante el cliente de PostgreSQL:
+
+```bash
+# cargar datos
+psql -d m5clase4 -U roberto -f sqldata/app_programa_202501131753.sql
+psql -d m5clase4 -U roberto -f sqldata/app_curso_202501131753.sql
+psql -d m5clase4 -U roberto -f sqldata/app_estudiante_202501131752.sql
+psql -d m5clase4 -U roberto -f sqldata/app_modulo_202501131753.sql
+psql -d m5clase4 -U roberto -f sqldata/app_relator_202501131754.sql
 ```
 
 ### Consulta de datos
@@ -67,7 +81,7 @@ python manage.py shell
 ```
 
 ```python
-from myapp.models import Estudiante, Programa, Modulo, Relator, Curso, EstudianteCurso, RelatorModulo
+from app.models import Estudiante, Programa, Modulo, Relator, Curso, CursoEstudiante, ModuloRelator
 
 # Consulta de todos los estudiantes
 estudiantes = Estudiante.objects.all()
@@ -79,12 +93,12 @@ print(programas)
 
 # Obtener los cursos de un estudiante
 estudiante = Estudiante.objects.get(rut_estudiante="12345678-9")
-cursos = estudiante.cursos.all()
+cursos = estudiante.curso_set.all()
 print(cursos)
 
 # Obtener los estudiantes de un curso
 curso = Curso.objects.get(codigo_curso="INF-2024-01")
-estudiantes = curso.estudiante_set.all()
+estudiantes = curso.estudiantes.all()
 print(estudiantes)
 ```
 
@@ -106,18 +120,18 @@ estudiantes = Estudiante.objects.filter(nombre_estudiante__contains='a')
 print(estudiantes)
 
 # Obtener los estudiantes sin un curso
-estudiantes = Estudiante.objects.filter(cursos__isnull=True)
+estudiantes = Estudiante.objects.filter(curso__isnull=True)
 print(estudiantes)
 
 # Estudiantes en el curso de INF-2024-01
-estudiantes = Estudiante.objects.filter(cursos__codigo_curso="INF-2024-01")
+estudiantes = Estudiante.objects.filter(curso__codigo_curso="INF-2024-01")
 print(estudiantes)
 ```
 
 También podemos usar el metodo `exclude` para obtener los estudiantes que no están en el curso de INF-2024-01.
 
 ```python
-estudiantes = Estudiante.objects.exclude(cursos__codigo_curso="INF-2024-01")
+estudiantes = Estudiante.objects.exclude(curso__codigo_curso="INF-2024-01")
 print(estudiantes)
 ```
 
@@ -143,10 +157,10 @@ Podemos revisar el SQL generado por un QuerySet usando el metodo `query`.
 estudiantes = Estudiante.objects.all()
 print(estudiantes.query)
 
-estudiantes = Estudiante.objects.filter(cursos__codigo_curso="INF-2024-01")
+estudiantes = Estudiante.objects.filter(curso__codigo_curso="INF-2024-01")
 print(estudiantes.query)
 
-estudiantes = Estudiante.objects.exclude(cursos__codigo_curso="INF-2024-01").order_by('-rut_estudiante')
+estudiantes = Estudiante.objects.exclude(curso__codigo_curso="INF-2024-01").order_by('-rut_estudiante')
 print(estudiantes.query)
 ```
 
@@ -167,7 +181,7 @@ print(estudiantes)
 
 # Obtener los estudiantes que estan en el curso de INF-2024-01 y no tiene una dirección determinada
 estudiantes = Estudiante.objects.filter(
-    Q(cursos__codigo_curso="INF-2024-01") & ~Q(direccion="Calle Falsa 123")
+    Q(curso__codigo_curso="INF-2024-01") & ~Q(direccion="Calle Falsa 123")
 )
 
 print(estudiantes.query)

@@ -1,6 +1,6 @@
 [
     {
-        "model": "myapp.estudiante",
+        "model": "app.estudiante",
         "pk": "1",
         "fields": {
             "rut_estudiante": "12345678-9",
@@ -12,7 +12,7 @@
         }
     },
     {
-        "model": "myapp.estudiante",
+        "model": "app.estudiante",
         "pk": "2",
         "fields": {
             "rut_estudiante": "87654321-0",
@@ -24,7 +24,7 @@
         }
     },
     {
-        "model": "myapp.programa",
+        "model": "app.programa",
         "pk": "1",
         "fields": {
             "nombre_programa": "Ingeniería en Informática",
@@ -32,7 +32,7 @@
         }
     },
     {
-        "model": "myapp.programa",
+        "model": "app.programa",
         "pk": "2",
         "fields": {
             "nombre_programa": "Diseño Gráfico",
@@ -40,7 +40,7 @@
         }
     },
     {
-        "model": "myapp.programa",
+        "model": "app.programa",
         "pk": "3",
         "fields": {
             "nombre_programa": "Ingeniería Comercial",
@@ -48,34 +48,34 @@
         }
     },
     {
-        "model": "myapp.modulo",
+        "model": "app.modulo",
         "pk": "1",
         "fields": {
             "nombre_modulo": "Programación Avanzada",
             "cantidad_horas": 120,
-            "programa": 1
+            "id_programa": 1
         }
     },
     {
-        "model": "myapp.modulo",
+        "model": "app.modulo",
         "pk": "2",
         "fields": {
             "nombre_modulo": "Bases de Datos",
             "cantidad_horas": 90,
-            "programa": 1
+            "id_programa": 1
         }
     },
     {
-        "model": "myapp.modulo",
+        "model": "app.modulo",
         "pk": "3",
         "fields": {
             "nombre_modulo": "Diseño Web",
             "cantidad_horas": 80,
-            "programa": 2
+            "id_programa": 2
         }
     },
     {
-        "model": "myapp.relator",
+        "model": "app.relator",
         "pk": "1",
         "fields": {
             "rut_relator": "23456789-1",
@@ -86,7 +86,7 @@
         }
     },
     {
-        "model": "myapp.relator",
+        "model": "app.relator",
         "pk": "2",
         "fields": {
             "rut_relator": "34567891-2",
@@ -97,57 +97,57 @@
         }
     },
     {
-        "model": "myapp.curso",
+        "model": "app.curso",
         "pk": "1",
         "fields": {
             "codigo_curso": "INF-2024-01",
             "cantidad_estudiantes": 25,
             "fecha_inicio": "2024-03-01",
             "fecha_termino": "2024-06-30",
-            "programa": 1
+            "id_programa": 1
         }
     },
     {
-        "model": "myapp.curso",
+        "model": "app.curso",
         "pk": "2",
         "fields": {
             "codigo_curso": "DG-2024-01",
             "cantidad_estudiantes": 20,
             "fecha_inicio": "2024-04-01",
             "fecha_termino": "2024-07-31",
-            "programa": 2
+            "id_programa": 2
         }
     },
     {
-        "model": "myapp.estudiantecurso",
+        "model": "app.cursoestudiante",
         "pk": "1",
         "fields": {
-            "estudiante": 1,
-            "curso": 1
+            "id_estudiante": 1,
+            "id_curso": 1
         }
     },
     {
-        "model": "myapp.estudiantecurso",
+        "model": "app.cursoestudiante",
         "pk": "2",
         "fields": {
-            "estudiante": 2,
-            "curso": 2
+            "id_estudiante": 2,
+            "id_curso": 2
         }
     },
     {
-        "model": "myapp.relatormodulo",
+        "model": "app.modulorelator",
         "pk": "1",
         "fields": {
-            "relator": 1,
-            "modulo": 1
+            "id_relator": 1,
+            "id_modulo": 1
         }
     },
     {
-        "model": "myapp.relatormodulo",
+        "model": "app.modulorelator",
         "pk": "2",
         "fields": {
-            "relator": 2,
-            "modulo": 3
+            "id_relator": 2,
+            "id_modulo": 3
         }
     }
 ]

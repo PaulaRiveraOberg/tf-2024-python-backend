@@ -1,7 +1,7 @@
 from django.contrib import admin
 
 # Register your models here.
-from .models import Estudiante, Programa, Modulo, Relator, Curso, EstudianteCurso, RelatorModulo
+from .models import Estudiante, Programa, Modulo, Relator, Curso, CursoEstudiante, ModuloRelator
 
 @admin.register(Estudiante)
 class EstudianteAdmin(admin.ModelAdmin):
@@ -15,9 +15,9 @@ class ProgramaAdmin(admin.ModelAdmin):
 
 @admin.register(Modulo)
 class ModuloAdmin(admin.ModelAdmin):
-    list_display = ('nombre_modulo', 'cantidad_horas', 'programa')
+    list_display = ('nombre_modulo', 'cantidad_horas', 'id_programa')
     search_fields = ('nombre_modulo',)
-    list_filter = ('programa',)
+    list_filter = ('id_programa',)
 
 @admin.register(Relator)
 class RelatorAdmin(admin.ModelAdmin):
@@ -26,19 +26,17 @@ class RelatorAdmin(admin.ModelAdmin):
 
 @admin.register(Curso)
 class CursoAdmin(admin.ModelAdmin):
-    list_display = ('codigo_curso', 'cantidad_estudiantes', 'fecha_inicio', 'fecha_termino', 'programa')
+    list_display = ('codigo_curso', 'cantidad_estudiantes', 'fecha_inicio', 'fecha_termino', 'id_programa')
     search_fields = ('codigo_curso',)
-    
-    list_filter = ('programa',)
+    list_filter = ('id_programa',)
 
-@admin.register(EstudianteCurso)
-class EstudianteCursoAdmin(admin.ModelAdmin):
-    list_display = ('estudiante', 'curso')
-    search_fields = ('estudiante', 'curso')
-    list_filter = ('curso',)
+@admin.register(CursoEstudiante)
+class CursoEstudianteAdmin(admin.ModelAdmin):
+    list_display = ('id_estudiante', 'id_curso')
+    search_fields = ('id_estudiante', 'id_curso')
 
-@admin.register(RelatorModulo)
-class RelatorModuloAdmin(admin.ModelAdmin):
-    list_display = ('relator', 'modulo')
-    search_fields = ('relator', 'modulo')
-    list_filter = ('modulo',)
+@admin.register(ModuloRelator)
+class ModuloRelatorAdmin(admin.ModelAdmin):
+    list_display = ('id_relator', 'id_modulo')
+    search_fields = ('id_relator', 'id_modulo')
+
