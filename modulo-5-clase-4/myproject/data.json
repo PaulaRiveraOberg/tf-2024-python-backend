@@ -1,0 +1,153 @@
+[
+    {
+        "model": "myapp.estudiante",
+        "pk": "1",
+        "fields": {
+            "rut_estudiante": "12345678-9",
+            "nombre_estudiante": "Juan Perez",
+            "fecha_nacimiento": "1990-01-01",
+            "direccion": "Av. Siempre Viva 123",
+            "correo": "juan@perez.com",
+            "telefono": "987654321"
+        }
+    },
+    {
+        "model": "myapp.estudiante",
+        "pk": "2",
+        "fields": {
+            "rut_estudiante": "87654321-0",
+            "nombre_estudiante": "Maria Lopez",
+            "fecha_nacimiento": "1990-01-01",
+            "direccion": "Av. Siempre Viva 123",
+            "correo": "maria@lopez.com",
+            "telefono": "987654321"
+        }
+    },
+    {
+        "model": "myapp.programa",
+        "pk": "1",
+        "fields": {
+            "nombre_programa": "Ingeniería en Informática",
+            "cantidad_horas": 3600
+        }
+    },
+    {
+        "model": "myapp.programa",
+        "pk": "2",
+        "fields": {
+            "nombre_programa": "Diseño Gráfico",
+            "cantidad_horas": 1800
+        }
+    },
+    {
+        "model": "myapp.programa",
+        "pk": "3",
+        "fields": {
+            "nombre_programa": "Ingeniería Comercial",
+            "cantidad_horas": 1600
+        }
+    },
+    {
+        "model": "myapp.modulo",
+        "pk": "1",
+        "fields": {
+            "nombre_modulo": "Programación Avanzada",
+            "cantidad_horas": 120,
+            "programa": 1
+        }
+    },
+    {
+        "model": "myapp.modulo",
+        "pk": "2",
+        "fields": {
+            "nombre_modulo": "Bases de Datos",
+            "cantidad_horas": 90,
+            "programa": 1
+        }
+    },
+    {
+        "model": "myapp.modulo",
+        "pk": "3",
+        "fields": {
+            "nombre_modulo": "Diseño Web",
+            "cantidad_horas": 80,
+            "programa": 2
+        }
+    },
+    {
+        "model": "myapp.relator",
+        "pk": "1",
+        "fields": {
+            "rut_relator": "23456789-1",
+            "nombre_relator": "Carlos Ruiz",
+            "titulo_relator": "Ingeniero Informático",
+            "anios_experiencia": 10,
+            "valor_hora": 25000
+        }
+    },
+    {
+        "model": "myapp.relator",
+        "pk": "2",
+        "fields": {
+            "rut_relator": "34567891-2",
+            "nombre_relator": "Ana Fernández",
+            "titulo_relator": "Diseñadora Gráfica",
+            "anios_experiencia": 8,
+            "valor_hora": 20000
+        }
+    },
+    {
+        "model": "myapp.curso",
+        "pk": "1",
+        "fields": {
+            "codigo_curso": "INF-2024-01",
+            "cantidad_estudiantes": 25,
+            "fecha_inicio": "2024-03-01",
+            "fecha_termino": "2024-06-30",
+            "programa": 1
+        }
+    },
+    {
+        "model": "myapp.curso",
+        "pk": "2",
+        "fields": {
+            "codigo_curso": "DG-2024-01",
+            "cantidad_estudiantes": 20,
+            "fecha_inicio": "2024-04-01",
+            "fecha_termino": "2024-07-31",
+            "programa": 2
+        }
+    },
+    {
+        "model": "myapp.estudiantecurso",
+        "pk": "1",
+        "fields": {
+            "estudiante": 1,
+            "curso": 1
+        }
+    },
+    {
+        "model": "myapp.estudiantecurso",
+        "pk": "2",
+        "fields": {
+            "estudiante": 2,
+            "curso": 2
+        }
+    },
+    {
+        "model": "myapp.relatormodulo",
+        "pk": "1",
+        "fields": {
+            "relator": 1,
+            "modulo": 1
+        }
+    },
+    {
+        "model": "myapp.relatormodulo",
+        "pk": "2",
+        "fields": {
+            "relator": 2,
+            "modulo": 3
+        }
+    }
+]
