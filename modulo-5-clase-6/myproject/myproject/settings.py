@@ -82,7 +82,11 @@ DATABASES = {
         'PASSWORD': 'roberto',
         'HOST': 'localhost',
         'PORT': '5432',
+        # para usar sqlite, reemplar la configuración de postgresql por la siguiente:
+        # 'ENGINE': 'django.db.backends.sqlite3',
+        # 'NAME': BASE_DIR / 'db.sqlite3',
     }
+    
 }
 
 

@@ -34,11 +34,11 @@ Además debemos asegurarnos de instalar las dependencias necesarias para Postgre
 source venv/bin/activate
 # en windows
 venv\Scripts\activate
-# instalar psycopg2
-pip install psycopg2
+# instalar psycopg2 (psycopg2-binary es la versión binaria de psycopg2)
+pip install psycopg2-binary
 ```
 
-Si recibimos el error al correr las migraciones:
+Si recibimos este error al correr las migraciones:
 ```
 django.db.utils.DataError: invalid value for parameter "TimeZone": "UTC"
 ```
@@ -70,7 +70,7 @@ python manage.py shell
 Creación de un registro:
 
 ```python
-from app.models import Programa
+from app.models import Programa, Modulo, Estudiante, Curso
 
 programa = Programa(
     nombre_programa="Ciencias de Datos", 
@@ -185,7 +185,9 @@ Genere un informe sobre los programas, módulos y relatores. Guíese según las 
 
 1. Ejecutar el script entregado (populate_db.py) para generar datos e insertarlos en la base de datos. Recuerde que antes de ejecutarlo, deberá haber ejecutado las migraciones respectivas (makemigrations y migrate). 
     a) Copiar el archivo .py en el directorio de manage.py
-    b) Ejecutar en el terminal: python manage.py shell < populate_db.py
+    b) Ejecutar en el terminal:
+        * (Get-Content  ../populate_db.py) | python ./manage.py shell    (en powershell)
+        * python manage.py shell < populate_db.py      (en bash)
 2. Obtener los programas que tengan más de 3 módulos asignados. 
 3. Listar los módulos que tengan más de 60 horas y el programa al que pertenecen.
 4. Filtrar estudiantes que tengan más de 18 años y cuyo nombre contenga `"Estu"`. 
