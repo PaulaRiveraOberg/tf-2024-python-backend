@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>Detalles del Curso: {{ curso.codigo_curso }}</h1>
+<p><strong>Programa:</strong> {{ programa.nombre_programa }}</p>
+<p><strong>Fecha de Inicio:</strong> {{ curso.fecha_inicio }}</p>
+<p><strong>Fecha de Término:</strong> {{ curso.fecha_termino }}</p>
+
+<h2>Módulos</h2>
+<ul>
+    {% for modulo in modulos %}
+    <li>{{ modulo.nombre_modulo }} ({{ modulo.cantidad_horas }} horas)</li>
+    {% endfor %}
+</ul>
+
+<h2>Estudiantes Inscritos</h2>
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>RUT</th>
+            <th>Nombre</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for estudiante in estudiantes %}
+        <tr>
+            <td>{{ estudiante.rut_estudiante }}</td>
+            <td>{{ estudiante.nombre_estudiante }}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+
+<a href="{% url 'inscribir_estudiante' curso.codigo_curso %}" class="btn btn-success">Inscribir Estudiante</a>
+{% endblock %}

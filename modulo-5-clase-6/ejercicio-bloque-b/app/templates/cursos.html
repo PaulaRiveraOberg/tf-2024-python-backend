@@ -1,0 +1,45 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>Listado de Cursos</h1>
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Código</th>
+            <th>Programa</th>
+            <th>Fecha de Inicio</th>
+            <th>Fecha de Término</th>
+            <th>Acciones</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for curso in page_obj %}
+        <tr>
+            <td>{{ curso.codigo_curso }}</td>
+            <td>{{ curso.id_programa.nombre_programa }}</td>
+            <td>{{ curso.fecha_inicio }}</td>
+            <td>{{ curso.fecha_termino }}</td>
+            <td><a href="{% url 'detalle_curso' curso.codigo_curso %}" class="btn btn-primary">Ver Detalles</a></td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+
+<div class="pagination">
+    <span class="step-links">
+        {% if page_obj.has_previous %}
+            <a href="?page=1">&laquo; Primera</a>
+            <a href="?page={{ page_obj.previous_page_number }}">Anterior</a>
+        {% endif %}
+
+        <span class="current">
+            Página {{ page_obj.number }} de {{ page_obj.paginator.num_pages }}
+        </span>
+
+        {% if page_obj.has_next %}
+            <a href="?page={{ page_obj.next_page_number }}">Siguiente</a>
+            <a href="?page={{ page_obj.paginator.num_pages }}">Última &raquo;</a>
+        {% endif %}
+    </span>
+</div>
+{% endblock %}
