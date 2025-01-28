@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>Inscribir Estudiante en el Curso: {{ curso.codigo_curso }}</h1>
+<form method="post">
+    {% csrf_token %}
+    <div class="form-group">
+        <label for="estudiante">Seleccionar Estudiante</label>
+        <select name="estudiante" id="estudiante" class="form-control">
+            {% for estudiante in estudiantes_disponibles %}
+            <option value="{{ estudiante.id_estudiante }}">{{ estudiante.nombre_estudiante }}</option>
+            {% endfor %}
+        </select>
+    </div>
+    <button type="submit" class="btn btn-primary">Inscribir</button>
+</form>
+{% endblock %}
