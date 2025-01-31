@@ -39,3 +39,5 @@ print(data.inserted_id)
     * Encontrar un libro por ISBN, texto en el nombre, un número predefinido de estrellas, un número mayor de estrellas.
 * Pruebe funcionalmente su API con Postman.
 * OPCIONAL: Diseñe al menos 2 pruebas de performance con Apache JMeter.
+
+* Solución: [ejercicio-bloque-a](./ejercicio-bloque-a/README.md)
