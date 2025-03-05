@@ -34,3 +34,4 @@ Este repositorio contiene los ejercicios asociados a las clases del programa Des
   * [Clase 8](/modulo-5-clase-8/README.md)
 * Modulo 6: Seguridad en aplicaciones backend Python
   * [Clase 1](/modulo-6-clase-1/README.md)
+  * [Clase 2](/modulo-6-clase-2/README.md)
