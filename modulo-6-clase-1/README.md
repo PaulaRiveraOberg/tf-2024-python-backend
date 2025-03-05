@@ -45,7 +45,7 @@ def read_current_user(username: Annotated[str, Depends(get_current_username)]):
 
 ## Authenticación en DRF
 
-Podemos implementar tambien http basic auth en Django Dest Framework, para esto debemos configurar en `settings.py` la variable `REST_FRAMEWORK`:
+Podemos implementar tambien http basic auth en Django Dest Framework, esto se revisará en detalle en la próxima clase, para esto debemos configurar en `settings.py` la variable `REST_FRAMEWORK`:
 
 ```python
 # settings.py
@@ -97,4 +97,3 @@ urlpatterns = [
 * Si no tenemos listos los endpoints, ¡este es el momento para ponernos al día!
 
 * Solución: [ejercicio-bloque-a](./ejercicio-bloque-a/README.md)
-* Solución: [ejercicio-bloque-a-django](./ejercicio-bloque-a-django/README.md)
