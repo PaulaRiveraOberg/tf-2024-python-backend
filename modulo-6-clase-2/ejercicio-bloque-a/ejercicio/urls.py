@@ -1,5 +1,5 @@
 """
-URL configuration for miapi project.
+URL configuration for ejercicio project.
 
 The `urlpatterns` list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/5.1/topics/http/urls/
@@ -15,15 +15,11 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 
-from autenticacion.views import AdminOnlyView, MensajeSecretoView
 from django.contrib import admin
 from django.urls import include, path
 
 urlpatterns = [
     path("admin/", admin.site.urls),
-    # requerido para la autenticación de django rest framework web client
     path("api-auth/", include("rest_framework.urls")),
-    # nuestros endpoints
-    path("api/mensaje-secreto/", MensajeSecretoView.as_view(), name="mensaje_secreto"),
-    path("api/admin-only/", AdminOnlyView.as_view(), name="admin_only"),
+    path("api/", include("books.urls")),
 ]
