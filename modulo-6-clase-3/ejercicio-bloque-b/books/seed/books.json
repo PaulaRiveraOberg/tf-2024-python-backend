@@ -1,0 +1,32 @@
+[
+    {
+        "pk": 1,
+        "model": "books.book",
+        "fields": {
+            "title": "El Resplandor",
+            "author": "Stephen King",
+            "published_year": 1977,
+            "is_exclusive": false
+        }
+    },
+    {
+        "pk": 2,
+        "model": "books.book",
+        "fields": {
+            "title": "Harry Potter y la Piedra Filosofal",
+            "author": "J.K. Rowling",
+            "published_year": 1997,
+            "is_exclusive": true
+        }
+    },
+    {
+        "pk": 3,
+        "model": "books.book",
+        "fields": {
+            "title": "El Misterio de la Isla de los Perros",
+            "author": "John Irving",
+            "published_year": 1987,
+            "is_exclusive": false
+        }
+    }
+]

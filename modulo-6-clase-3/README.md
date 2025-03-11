@@ -197,7 +197,7 @@ Podemos encontrar el proyecto completo en [miapi](./miapi/)
 * Cree los Request de prueba en Postman para probar los endpoints anteriores: 
 * Ingrese a https://jwt.io/#debugger y revise el contenido del token generado
 
-* Solución: [ejercicio-bloque-a](./ejercicio-bloque-a/README.md)
+* Solución: [ejercicio-bloque-b](./ejercicio-bloque-b/README.md) (se encuentra en conjunto con la solución del bloque B)
 
 ## Ejercicio B: Personalización de Token JWT en DRF
 * Modifique el serializador de obtención de token para agregar:
