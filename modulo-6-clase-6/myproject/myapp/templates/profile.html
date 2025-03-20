@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Profile</title>
+</head>
+<body>
+    <h1>Bienvenido, {{ request.user.username }}</h1>
+
+    <p><strong>Nombre completo:</strong> {{ request.user.get_full_name }}</p>
+    <p><strong>Email:</strong> {{ request.user.email }}</p>
+
+    {% if oauth2_data %}
+        <h2>Datos de OAuth2</h2>
+        <p><strong>Proveedor:</strong> {{ oauth2_data.provider }}</p>
+        <p><strong>UID:</strong> {{ oauth2_data.uid }}</p>
+        <p><strong>Access Token:</strong> {{ oauth2_data.extra_data.access_token }}</p>
+    {% endif %}
+
+    <form action="{% url 'logout' %}" method="post">
+        {% csrf_token %}
+        <button type="submit">Cerrar sesión</button>
+    </form>
+
+
+</body>
+</html>
