@@ -164,3 +164,5 @@ cython_debug/
 # Autoevaluaciones
 autoevaluaciones/data
 modulo-6-clase-1/ejercicio-bloque-a/libreria.db
+modulo-6-clase-4/ejercicio-bloque-a/libreria.db
+modulo-6-clase-4/ejercicio-bloque-a-mongo/app/libreria.db
