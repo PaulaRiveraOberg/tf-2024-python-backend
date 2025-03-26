@@ -96,14 +96,14 @@ from django.contrib.auth.models import Group, User, Permission
 
 # Crear un grupo
 grupo = Group.objects.create(name='editores')
-permiso = Permission.objects.get(codename='can_publish_post')
+permiso = Permission.objects.get(codename='change_post')
 
 # Asignar un permiso al grupo
 grupo.permissions.add(permiso)
 usuario = User.objects.get(username='normal_user')
 usuario.groups.add(grupo)
 # revisar que el usuario tiene el permiso
-usuario.has_perm('miapp.can_publish_post')
+usuario.has_perm('miapp.change_post')
 ```
 
 ### RBAC: Role-Based Access Control

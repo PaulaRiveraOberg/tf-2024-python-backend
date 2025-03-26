@@ -2,14 +2,14 @@ from miapp.models import Post
 from rest_framework.permissions import DjangoModelPermissions
 from rest_framework.viewsets import ModelViewSet
 
-from .permissions import CanEditOwnPostPermission
+from .permissions import CanEditOwnPostPermission, DjangoModelPermissionsWithView
 from .serializers import PostSerializer
 
 
 class PostViewSet(ModelViewSet):
     queryset = Post.objects.all()
     serializer_class = PostSerializer
-    permission_classes = [DjangoModelPermissions]
+    permission_classes = [DjangoModelPermissionsWithView]
 
 
 class MyPostViewSet(ModelViewSet):
