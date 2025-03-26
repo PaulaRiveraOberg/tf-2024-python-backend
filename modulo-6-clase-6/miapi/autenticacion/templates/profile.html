@@ -1,0 +1,14 @@
+
+{% extends "base.html" %}
+
+{% block title %}Profile{% endblock %}
+
+{% block content %}
+    <h1>Profile</h1>
+    <p>Nombre: {{ user.first_name }}</p>
+    <p>Apellido: {{ user.last_name }}</p>
+    <p>Email: {{ user.email }}</p>
+    
+    <h2>Oauth2 Data</h2>
+    <p>Token: {{ oauth2_data.access_token | truncatechars:10 }}</p>
+{% endblock %}
