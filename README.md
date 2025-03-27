@@ -41,3 +41,5 @@ Este repositorio contiene los ejercicios asociados a las clases del programa Des
   * [Clase 6](/modulo-6-clase-6/README.md)
   * [Clase 7](/modulo-6-clase-7/README.md)
   * [Clase 8](/modulo-6-clase-8/README.md)
+* Modulo 7: Patrones de Integración e Interoperabilidad en entornos Python
+  * [Clase 1](/modulo-7-clase-1/README.md)

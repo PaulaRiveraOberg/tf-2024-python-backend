@@ -166,3 +166,7 @@ autoevaluaciones/data
 modulo-6-clase-1/ejercicio-bloque-a/libreria.db
 modulo-6-clase-4/ejercicio-bloque-a/libreria.db
 modulo-6-clase-4/ejercicio-bloque-a-mongo/app/libreria.db
+
+# archivos generados por protobuf
+modulo-7-clase-1/distance_unary_pb2*
+
