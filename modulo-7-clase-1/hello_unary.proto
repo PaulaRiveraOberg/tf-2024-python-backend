@@ -1,0 +1,14 @@
+syntax = "proto3";
+
+service HelloService{
+    // unary service
+    rpc hello_world(User) returns (Hello) {}
+}
+
+message User{
+    string name = 1;
+}
+
+message Hello{
+    string greeting = 1;
+}
