@@ -32,7 +32,7 @@ El instalador e instrucciones para instalar en windows, OSX y Linux, pueden enco
 
 ### RabbitMQ CLI
 
-RabbitMQ nos proporciona una herramienta CLI para interactuar con el servidor. Esta se instala con el instalador de RabbitMQ.
+RabbitMQ nos proporciona una herramienta CLI para interactuar con el servidor. Esta se instala con el instalador de RabbitMQ. En windows deben acceder a este a traves del programa "RabbitMQ Command Prompt" que les abrirá un terminal con acceso al CLI (deben usar `rabbitmqctl.bat`)
 
 Algunos comandos útiles:
 
