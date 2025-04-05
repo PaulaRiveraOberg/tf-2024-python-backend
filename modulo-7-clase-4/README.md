@@ -83,3 +83,26 @@ Para probar el ejemplo debemos seguir los siguientes pasos:
     python producer.py
     ```
 4. Verificar que el mensaje se ha enviado y recibido correctamente.
+
+### Trabajo Grupal Bloque A
+
+Entendiendo la mensajería
+
+- Instale RabbitMQ (en Windows se sugiere con instalador; en Linux y Mac se sugiere con
+Docker).
+- Utilice el código entregado (“hello world”) para entender la mensajería.
+- Mantenga dos receptores: ¿qué ocurre?
+- Discuta con su equipo cómo se podría implementar una operación distribuida con lo que
+hemos visto hasta ahora.
+    - Implemente una operación “staged” y detenga el envío de mensajes.
+    - Observe y discuta la asincronía: el productor no necesita estar arriba esperando la respuesta del receptor.
+
+### Trabajo Grupal Bloque B
+
+Entendiendo la mensajería
+
+- Ejecute los dos códigos.
+- Modifíquelos enviando distintos mensajes para que usted y su equipo puedan discutir la mensajería subyacente.
+- Cree varias instancias de trabajadores y suscriptores. Observe el comportamiento.
+- En particular, en los trabajadores asigne un mecanismo de “delay” entre que se recibe el trabajo y se realiza el “ack”.
+- Escoja un tiempo apropiado de tal forma que pueda detener el trabajador y ver lo que pasa con el trabajo pendiente.
