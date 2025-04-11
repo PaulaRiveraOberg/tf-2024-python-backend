@@ -101,7 +101,6 @@ git commit -m "Add ping view"
 
 ```python
 from django.test import TestCase, Client
-from myapp.views import sumar
 
 # Test del endpoint ping
 class PingTests(TestCase):
@@ -256,6 +255,24 @@ git push origin feature/include-response-date
 
 12. Verifica que ahora pase y el PR quede listo para aprobarse
 
+### Parte 6: Agregar reglas para proteger la rama main
+
+1. Para proteger la rama main, pediremos cumplir las siguientes condiciones:
+    - Requiere un PR
+    - Requiere verificación de estado de las pruebas
+
+2. Para esto iremos a la pestaña `Settings` de nuestro repositorio y en la sección `Branches` haremos click en `Add rule`. Debemos agregar las siguientes reglas:
+    - Branch name pattern: `main`
+    - Require a pull request before merging
+      - No activaremos require approvals ya que queremos que se pueda hacer el merge sin aprobación de nadie adicional
+    - Require status checks to pass before merging
+      - Una vez seleccionada esta opción, se debe seleccionar la opción, el cuadro de busqueda agregaremos `build` y seleccionaremos la opción que aparecerá
+    - Do not allow bypassing the above settings
+      - Esta opción nos permite evitar que se pueda hacer un merge bypassando las reglas anteriores
+
+Podemos ver estas reglas en la siguiente imagen:
+
+![Reglas de protección de la rama main](./images/rules-main-branch.png)
 
 ### Trabajo Grupal Bloque A
 
