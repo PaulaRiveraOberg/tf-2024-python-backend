@@ -35,14 +35,15 @@ cp .env.example .env
 ```
 
 Requerimos las siguientes variables de entorno:
-* `PGDATABASE`
-* `PGUSER`
-* `PGPASSWORD`
-* `PGHOST`
-* `PGPORT`
-* `SECRET_KEY`
-* `PRODUCTION_HOST`
-* `DEBUG`
+
+ * `PGDATABASE`
+ * `PGUSER`
+ * `PGPASSWORD`
+ * `PGHOST`
+ * `PGPORT`
+ * `SECRET_KEY`
+ * `PRODUCTION_HOST`
+ * `DEBUG`
 
 De momento solo podemos configurar las variables `DEBUG=true` y `SECRET_KEY`. Ya que para las otras variables necesitamos una cuenta en Render y Neon.
 
@@ -85,11 +86,12 @@ postgresql://user:password@host:port/database?sslmode=require
 ```
 
 Desde este completaremos los valores de las variables de entorno de nuestro archivo .env. Por ejemplo:
-* `PGDATABASE`: database
-* `PGUSER`: user
-* `PGPASSWORD`: password
-* `PGHOST`: host
-* `PGPORT`: port
+
+ * `PGDATABASE`: database
+ * `PGUSER`: user
+ * `PGPASSWORD`: password
+ * `PGHOST`: host
+ * `PGPORT`: port
 
 ### Creación de proyecto en Render
 
@@ -110,24 +112,25 @@ Ahora debemos configurar el entorno de render.
 ![Configurar entorno](./images/render-configure-environment.png)
 
 Debemos asegurarnos de elegir lo siguiente:
-* Lenguaje: Python
-* Branch: main
-* Región: US East
-* Build Command: `./build.sh`
-* Start Command: `python -m gunicorn myproject.asgi:application -k uvicorn.workers.UvicornWorker`
-* Instance Type: Free
+
+ * Lenguaje: Python
+ * Branch: main
+ * Región: US East
+ * Build Command: `./build.sh`
+ * Start Command: `python -m gunicorn myproject.asgi:application -k uvicorn.workers.UvicornWorker`
+ * Instance Type: Free
 
 Luego en variables de entorno debemos agregar las siguientes variables:
 
 ![Configurar variables de entorno](./images/render-configure-environment-variables.png)
 
-* `SECRET_KEY`: clave secreta para el proyecto, podemos generar una con `python -c 'import secrets; print(secrets.token_hex(32))'`
-* `PGDATABASE` valor desde neon
-* `PGUSER` valor desde neon
-* `PGPASSWORD` valor desde neon
-* `PGHOST` valor desde neon
-* `PGPORT` valor desde neon
-* `PRODUCTION_HOST` lo dejaremos como example.com de momento ya que necesitamos que render nos asigne el dominio.
+ * `SECRET_KEY`: clave secreta para el proyecto, podemos generar una con `python -c 'import secrets; print(secrets.token_hex(32))'`
+ * `PGDATABASE` valor desde neon
+ * `PGUSER` valor desde neon
+ * `PGPASSWORD` valor desde neon
+ * `PGHOST` valor desde neon
+ * `PGPORT` valor desde neon
+ * `PRODUCTION_HOST` lo dejaremos como example.com de momento ya que necesitamos que render nos asigne el dominio.
 
 Una vez configurado todo, podemos hacer click en el botón "Deploy" para iniciar el despliegue.
 
