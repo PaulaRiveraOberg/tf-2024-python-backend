@@ -1,0 +1,63 @@
+{% extends 'web/base.html' %}
+
+{% block title %}Inicio - Librería Online{% endblock %}
+
+{% block content %}
+<div class="text-center mb-5">
+    <h1 class="display-4">Nuestros Libros</h1>
+    <p class="lead text-muted">Descubre nuestra amplia selección de títulos</p>
+</div>
+
+<div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+    {% for libro in libros %}
+    <div class="col">
+        <div class="card h-100 shadow-sm hover-shadow">
+            <div class="position-relative">
+                {% if libro.imagen %}
+                <img src="{{ libro.imagen.url }}" class="card-img-top" alt="{{ libro.titulo }}" style="height: 200px; object-fit: cover;">
+                {% else %}
+                <div class="card-img-top bg-light text-center d-flex align-items-center justify-content-center" style="height: 200px;">
+                    <i class="bi bi-book" style="font-size: 3rem; color: #3498db;"></i>
+                </div>
+                {% endif %}
+                <div class="position-absolute top-0 end-0 m-2">
+                    <span class="badge bg-primary">{{ libro.stock }} disponibles</span>
+                </div>
+            </div>
+            <div class="card-body">
+                <h5 class="card-title text-truncate">{{ libro.titulo }}</h5>
+                <div class="mb-2">
+                    <small class="text-muted">
+                        <i class="bi bi-person"></i>
+                        {% for autor in libro.autores.all %}
+                        {{ autor.nombre }} {{ autor.apellido }}{% if not forloop.last %}, {% endif %}
+                        {% endfor %}
+                    </small>
+                </div>
+                <div class="mb-2">
+                    <small class="text-muted">
+                        <i class="bi bi-building"></i> {{ libro.editorial.nombre }}
+                    </small>
+                </div>
+                <div class="mb-3">
+                    {% for categoria in libro.categorias.all %}
+                    <span class="badge bg-secondary me-1">{{ categoria.nombre }}</span>
+                    {% endfor %}
+                </div>
+                <div class="d-flex justify-content-between align-items-center">
+                    <h5 class="text-primary mb-0">${{ libro.precio }}</h5>
+                    <button class="btn btn-outline-primary btn-sm">
+                        <i class="bi bi-cart-plus"></i> Agregar
+                    </button>
+                </div>
+            </div>
+            <div class="card-footer bg-transparent border-top-0">
+                <small class="text-muted">
+                    <i class="bi bi-calendar"></i> Publicado: {{ libro.fecha_publicacion }}
+                </small>
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+{% endblock %} 
