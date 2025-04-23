@@ -1,0 +1,6 @@
+services:
+  modulo8clase4:
+    image: modulo8clase4
+    build:
+      context: .
+      dockerfile: ./Dockerfile
