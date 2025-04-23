@@ -11,6 +11,8 @@ Para iniciar el proyecto, primero debemos instalar las dependencias del proyecto
 ```bash
 cd miproyecto
 pip install -r requirements.txt
+# instalaremos tambien django-debug-toolbar
+pip install django-debug-toolbar
 ```
 
 Luego inicializaremos la base de datos.
@@ -19,13 +21,10 @@ Luego inicializaremos la base de datos.
 python manage.py migrate
 ```
 
-Indicaremos en la guía los pasos para instalar el [Django Debug Toolbar](https://django-debug-toolbar.readthedocs.io/en/latest/). Primero instalamos el paquete.
+Indicaremos en la guía los pasos para instalar [Django Debug Toolbar](https://django-debug-toolbar.readthedocs.io/en/latest/).
 
-```bash
-pip install django-debug-toolbar
-```
 
-Luego agregamos la aplicación `debug_toolbar` y el middleware en el archivo [`myproject/settings.py`](./miproyecto/myproject/settings.py).
+Tras instalar el package `django-debug-toolbar`, agregamos la aplicación `debug_toolbar` y el middleware en el archivo [`myproject/settings.py`](./miproyecto/myproject/settings.py).
 
 ```python
 INSTALLED_APPS = [
