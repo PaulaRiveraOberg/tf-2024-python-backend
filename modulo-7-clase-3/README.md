@@ -7,8 +7,7 @@
 Primero debemos instalar las dependencias necesarias en nuestro entorno virtual:
 
 ```bash
-pip install grpcio
-pip install grpcio-tools
+pip install grpcio grpcio-tools requests fastapi uvicorn
 ```
 
 ### Patron Adapter
@@ -52,3 +51,10 @@ El flujo es el siguiente:
 2. El servidor obtiene datos de un servicio HTTP externo
 3. Los datos se adaptan del formato remoto al formato local
 4. La información adaptada se devuelve al cliente
+
+### Ejercicio
+
+Mejorando el adaptador
+
+* Incorpore un listado de exámenes a cada paciente (separados por “-”, luego de haber sido separados por “;”).
+* Modifique el adaptador (el código que sea necesario) para realizar una adaptación adecuada de forma que el cliente pueda “entender” a un paciente con sus exámenes en formato “JSON”.

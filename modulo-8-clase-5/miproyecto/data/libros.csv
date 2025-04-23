@@ -1,0 +1,6 @@
+titulo,editorial_id,fecha_publicacion,isbn,descripcion,paginas,precio,stock
+Cien años de soledad,1,1967-05-30,9780307474728,"La historia de la familia Buendía en el pueblo de Macondo.",432,19.99,50
+La ciudad y los perros,2,1963-10-10,9788420471839,"Novela sobre la vida en un colegio militar en Lima.",448,15.99,30
+La casa de los espíritus,3,1982-01-01,9780307474643,"La historia de la familia Trueba a lo largo de cuatro generaciones.",480,18.99,40
+Rayuela,4,1963-06-28,9788433973320,"Novela experimental que puede leerse de múltiples formas.",736,22.99,25
+Ficciones,5,1944-01-01,9780307950925,"Colección de cuentos que exploran temas filosóficos y metafísicos.",224,14.99,35 

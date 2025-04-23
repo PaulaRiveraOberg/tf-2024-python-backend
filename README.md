@@ -50,3 +50,4 @@ Este repositorio contiene los ejercicios asociados a las clases del programa Des
   * [Clase 2](/modulo-8-clase-2/README.md)
   * [Clase 3](/modulo-8-clase-3/README.md)
   * [Clase 4](/modulo-8-clase-4/README.md)
+  * [Clase 5](/modulo-8-clase-5/README.md)
